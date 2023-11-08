@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'cadastro-de-alunos-escola-de-musica-e-matematica';
+  title = 'Cadastro de alunos Escola de Música e Matemática';
 }
