@@ -1,6 +1,6 @@
-# CadastroDeAlunosEscolaDeMusicaEMatematica
+# Cadastro de alunos Escola de Música e Matemática
 
-![Alt text](image.png)
+![Imagen da tela](image.png)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.9.
 
