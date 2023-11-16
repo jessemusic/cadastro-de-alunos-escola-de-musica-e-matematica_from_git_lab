@@ -11,9 +11,13 @@
                     Música
                 </mat-button-toggle>
             </mat-button-toggle-group>
-            <mat-chip-listbox aria-label="Seleção de cursos">
+            <mat-chip-listbox (click)="openDialog()" aria-label="Seleção de cursos">
                 <mat-chip-option selected>Individual</mat-chip-option>
                 <mat-chip-option>Em grupo</mat-chip-option>
+            </mat-chip-listbox>
+
+            <mat-chip-listbox aria-label="Seleção de cursos">
+                <button mat-raised-button color="primary" (click)="onCadastroDeAlunos()">CADASTRO DE ALUNOS</button>
             </mat-chip-listbox>
         </div>
         <div class="flex-container">
@@ -32,6 +36,9 @@
             <input matInput placeholder="Avançado">
             <mat-icon matSuffix>search</mat-icon>
         </mat-form-field>
+          <button mat-flat-button color="primary">BUSCAR</button> 
         </div>
+            
+
     </form>
 </app-card>

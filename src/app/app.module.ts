@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { CadastroAlunosComponent } from './cadastro-alunos/cadastro-alunos.component';
+import { CadastroAlunosComponent } from './cadastro/cadastro-alunos.component';
 import { EnderecosAlunosComponent } from './enderecos-alunos/enderecos-alunos.component';
 import { HelloWorldComponent } from './hello-world/hello-world.component';
 import { HeaderComponent } from './shared/header/header.component';
@@ -24,6 +24,10 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatChipsModule } from '@angular/material/chips';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
+import { ModalComponent } from './shared/modal/modal.component';
+import { MatDialogModule } from '@angular/material/dialog';
+import { ReactiveFormsModule } from '@angular/forms';
+import { MatSelectModule } from '@angular/material/select';
 @NgModule({
   declarations: [
     AppComponent,
@@ -38,7 +42,8 @@ import { MatInputModule } from '@angular/material/input';
     HomeComponent,
     CardBuscaComponent,
     CardDepoimentosComponent,
-    FormCursoComponent
+    FormCursoComponent,
+    ModalComponent
   ],
   imports: [
     BrowserModule,
@@ -51,7 +56,11 @@ import { MatInputModule } from '@angular/material/input';
     MatIconModule,
     MatChipsModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
+    MatDialogModule,
+    ReactiveFormsModule,
+    MatSelectModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
