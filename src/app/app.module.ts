@@ -28,6 +28,9 @@ import { ModalComponent } from './shared/modal/modal.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatSelectModule } from '@angular/material/select';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { CardCursosService } from './shared/card/card-cursos.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -59,10 +62,13 @@ import { MatSelectModule } from '@angular/material/select';
     MatInputModule,
     MatDialogModule,
     ReactiveFormsModule,
-    MatSelectModule
+    MatSelectModule,
+    MatPaginatorModule,
+    MatGridListModule
+
 
   ],
-  providers: [],
+  providers: [ CardCursosService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
