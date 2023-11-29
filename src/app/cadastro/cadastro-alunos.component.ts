@@ -1,6 +1,8 @@
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { FormCursoComponent } from './../shared/form-curso/form-curso.component';
 import { Component, OnInit } from '@angular/core';
+import { AlunoService } from '../aluno/aluno.service';
+import { Aluno } from '../aluno-model/Aluno';
 
 @Component({
   selector: 'app-cadastro-alunos',
@@ -45,7 +47,12 @@ export class CadastroAlunosComponent implements OnInit {
   
   form: FormGroup;
 
-  constructor(private FormBuilder: FormBuilder) {
+novoAluno: any = new Aluno();
+
+  constructor(private FormBuilder: FormBuilder,
+    private alunoService: AlunoService) {
+    
+    
     this.form = this.FormBuilder.group({
       nome: [null],
       email: [null],
@@ -54,6 +61,17 @@ export class CadastroAlunosComponent implements OnInit {
       curso: [null]
     });
   }
+
+    // adicionarAluno(): void {
+    // // dados do formulário preenchidos pelo usuário
+    // this.alunoService.adicionarAluno(this.novoAluno).subscribe((response: any) => {
+    //   // Faça algo com a resposta do serviço, se necessário
+    //   console.log(response);
+
+    //   // Reinicie o objeto para um novo aluno
+    //   this.novoAluno = new Aluno();
+    // });
+// }
   ngOnInit(): void {
 
   }
@@ -61,6 +79,8 @@ export class CadastroAlunosComponent implements OnInit {
   enviarFormulario() {
     
   }
+
+  
 
 
 }

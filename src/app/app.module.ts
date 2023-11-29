@@ -32,6 +32,7 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { CardCursosService } from './shared/card/card-cursos.service';
 import { DataBindingComponent } from './data-binding/data-binding.component';
+import { AlunoComponent } from './aluno/aluno.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -48,7 +49,8 @@ import { DataBindingComponent } from './data-binding/data-binding.component';
     CardDepoimentosComponent,
     FormCursoComponent,
     ModalComponent,
-    DataBindingComponent
+    DataBindingComponent,
+    AlunoComponent
   ],
   imports: [
     BrowserModule,
