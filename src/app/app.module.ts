@@ -26,11 +26,12 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { ModalComponent } from './shared/modal/modal.component';
 import { MatDialogModule } from '@angular/material/dialog';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatSelectModule } from '@angular/material/select';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { CardCursosService } from './shared/card/card-cursos.service';
+import { DataBindingComponent } from './data-binding/data-binding.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -46,7 +47,8 @@ import { CardCursosService } from './shared/card/card-cursos.service';
     CardBuscaComponent,
     CardDepoimentosComponent,
     FormCursoComponent,
-    ModalComponent
+    ModalComponent,
+    DataBindingComponent
   ],
   imports: [
     BrowserModule,
@@ -64,7 +66,8 @@ import { CardCursosService } from './shared/card/card-cursos.service';
     ReactiveFormsModule,
     MatSelectModule,
     MatPaginatorModule,
-    MatGridListModule
+    MatGridListModule,
+    FormsModule,
 
 
   ],
