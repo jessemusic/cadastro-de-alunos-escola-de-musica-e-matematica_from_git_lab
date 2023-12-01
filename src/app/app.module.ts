@@ -1,9 +1,9 @@
-import { NgModule } from '@angular/core';
+import { NgModule} from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { CadastroAlunosComponent } from './cadastro/cadastro-alunos.component';
+// import { CadastroAlunosComponent } from './cadastro/cadastro-alunos.component';
 import { EnderecosAlunosComponent } from './enderecos-alunos/enderecos-alunos.component';
 import { HelloWorldComponent } from './hello-world/hello-world.component';
 import { HeaderComponent } from './shared/header/header.component';
@@ -32,11 +32,16 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { CardCursosService } from './shared/card/card-cursos.service';
 import { DataBindingComponent } from './data-binding/data-binding.component';
-import { AlunoComponent } from './aluno/aluno.component';
+import { MessageService } from "primeng/api"
+import { MessagesModule } from 'primeng/messages'
+import { MessageModule } from "primeng/message"
+import { CadastroAlunosComponent } from './cadastro/cadastro-alunos.component';
+import {ButtonModule} from"primeng/button"
+
 @NgModule({
   declarations: [
     AppComponent,
-    CadastroAlunosComponent,
+     CadastroAlunosComponent,
     EnderecosAlunosComponent,
     HelloWorldComponent,
     HeaderComponent,
@@ -49,8 +54,8 @@ import { AlunoComponent } from './aluno/aluno.component';
     CardDepoimentosComponent,
     FormCursoComponent,
     ModalComponent,
-    DataBindingComponent,
-    AlunoComponent
+    DataBindingComponent
+    
   ],
   imports: [
     BrowserModule,
@@ -70,10 +75,17 @@ import { AlunoComponent } from './aluno/aluno.component';
     MatPaginatorModule,
     MatGridListModule,
     FormsModule,
+    MessageModule,
+    MessagesModule,
+    ButtonModule
+   
+   
+  
 
 
   ],
-  providers: [ CardCursosService ],
-  bootstrap: [AppComponent]
+  providers: [CardCursosService,
+    MessageService],
+  bootstrap: [AppComponent ]
 })
 export class AppModule { }
