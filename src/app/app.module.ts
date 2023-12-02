@@ -36,7 +36,9 @@ import { MessageService } from "primeng/api"
 import { MessagesModule } from 'primeng/messages'
 import { MessageModule } from "primeng/message"
 import { CadastroAlunosComponent } from './cadastro/cadastro-alunos.component';
-import {ButtonModule} from"primeng/button"
+import {ButtonModule} from"primeng/button";
+import { ConsultaAlunoComponent } from './aluno/consulta-aluno/consulta-aluno.component'
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -54,7 +56,8 @@ import {ButtonModule} from"primeng/button"
     CardDepoimentosComponent,
     FormCursoComponent,
     ModalComponent,
-    DataBindingComponent
+    DataBindingComponent,
+    ConsultaAlunoComponent
     
   ],
   imports: [
@@ -77,7 +80,8 @@ import {ButtonModule} from"primeng/button"
     FormsModule,
     MessageModule,
     MessagesModule,
-    ButtonModule
+    ButtonModule,
+    HttpClientModule 
    
    
   

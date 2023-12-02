@@ -8,7 +8,7 @@ export class AlunoService {
 
   constructor() { }
 
-  public salvar(data: Aluno) {
-    localStorage.setItem(data.cpf, JSON.stringify(data));
-  }
+  // public salvar(data: Aluno) {
+  //   localStorage.setItem(data.cpf, JSON.stringify(data));
+  // }
 }

@@ -1,3 +1,4 @@
+import { ApiAlunoService } from './../aluno/http-api/api-aluno.service';
 import { AlunoService } from './../aluno/services/aluno.service';
 import { FormBuilder, FormGroup, NgForm } from '@angular/forms';
 import { FormCursoComponent } from './../shared/form-curso/form-curso.component';
@@ -21,13 +22,25 @@ export class CadastroAlunosComponent implements OnInit {
   
   constructor(
     private messageService: MessageService,
-    private AlunoService : AlunoService
+    // private alunoService: AlunoService,
+    private apiAlunoService: ApiAlunoService
 
   ) { }
     
    
+   dados: any;
+
    ngOnInit(): void {
      this.data = new Aluno();
+
+     this.apiAlunoService.getDados().subscribe(
+      (data) => {
+        this.dados = data;
+      },
+      (error) => {
+        console.error('Erro na requisição:', error);
+      }
+    );
   }
 
 
@@ -35,12 +48,14 @@ export class CadastroAlunosComponent implements OnInit {
       
     this.messageService.clear;
     if (form.valid) {
-      this.AlunoService.salvar(this.data);
+      this.apiAlunoService.salvar(this.data);
       this.messageService.add({ severity: "sucess", summary: "Infomação", detail: "Aluno cadastrado com sucesso" });
     } else this.messageService.add({ severity: "error", summary: "Erro", detail: "Preencha os campos obrigatórios(*)!" });
 
   
   }
+
+
 
 }
 
