@@ -35,7 +35,8 @@ export class CadastroAlunosComponent implements OnInit {
 
      this.apiAlunoService.getDados().subscribe(
       (data) => {
-        this.dados = data;
+         this.dados = data;
+         console.log(this.dados)
       },
       (error) => {
         console.error('Erro na requisição:', error);

@@ -8,8 +8,7 @@ const routes: Routes = [
   { path: '' , component: HomeComponent },
   { path: '',pathMatch: 'full',redirectTo : 'alunos' },
   { path: 'cadastro', component: CadastroAlunosComponent },
-  { path: 'consulta', component: ConsultaAlunoComponent }
-  // {path: 'alunos',loadChildren: './alunos/alunos.module#AlunosModule'},
+  // { path: 'consulta', component: ConsultaAlunoComponent },
 ];
 
 @NgModule({
