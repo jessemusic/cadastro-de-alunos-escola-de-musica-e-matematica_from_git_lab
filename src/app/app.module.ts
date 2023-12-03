@@ -39,6 +39,7 @@ import { CadastroAlunosComponent } from './cadastro/cadastro-alunos.component';
 import {ButtonModule} from"primeng/button";
 import { ConsultaAlunoComponent } from './aluno/consulta-aluno/consulta-aluno.component'
 import { HttpClientModule } from '@angular/common/http';
+import { AlunosModule } from './alunos/alunos.module';
 
 @NgModule({
   declarations: [
@@ -57,7 +58,8 @@ import { HttpClientModule } from '@angular/common/http';
     FormCursoComponent,
     ModalComponent,
     DataBindingComponent,
-    ConsultaAlunoComponent
+    ConsultaAlunoComponent,
+
     
   ],
   imports: [
@@ -81,7 +83,8 @@ import { HttpClientModule } from '@angular/common/http';
     MessageModule,
     MessagesModule,
     ButtonModule,
-    HttpClientModule 
+    HttpClientModule,
+        AlunosModule
    
    
   

@@ -13,7 +13,7 @@ export class AlunosListaComponent implements OnInit {
 constructor(private service: ApiAlunoService){}
 
   ngOnInit(): void {
-    this.service.list().subscribe(console.log);
+    this.service.list().subscribe(dados => this.alunos = dados);
   }
 
 }

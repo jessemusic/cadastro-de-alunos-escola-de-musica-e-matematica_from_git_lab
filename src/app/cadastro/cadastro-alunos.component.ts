@@ -22,7 +22,7 @@ export class CadastroAlunosComponent implements OnInit {
   
   constructor(
     private messageService: MessageService,
-    // private alunoService: AlunoService,
+    private alunoService: AlunoService,
     private apiAlunoService: ApiAlunoService
 
   ) { }
@@ -49,7 +49,7 @@ export class CadastroAlunosComponent implements OnInit {
       
     this.messageService.clear;
     if (form.valid) {
-      this.apiAlunoService.salvar(this.data);
+      this.alunoService.salvar(this.data);
       this.messageService.add({ severity: "sucess", summary: "Infomação", detail: "Aluno cadastrado com sucesso" });
     } else this.messageService.add({ severity: "error", summary: "Erro", detail: "Preencha os campos obrigatórios(*)!" });
 
