@@ -1,6 +1,10 @@
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { AlunoService } from './../aluno/services/aluno.service';
+import { FormBuilder, FormGroup, NgForm } from '@angular/forms';
 import { FormCursoComponent } from './../shared/form-curso/form-curso.component';
 import { Component, OnInit } from '@angular/core';
+import { Aluno } from '../aluno-model/Aluno';
+import { Estado } from '../estado/Estado';
+import { MessageService } from 'primeng/api';
 
 @Component({
   selector: 'app-cadastro-alunos',
@@ -10,22 +14,33 @@ import { Component, OnInit } from '@angular/core';
   
 
 export class CadastroAlunosComponent implements OnInit {
+
+  public data!: Aluno;
+
+  estados: any = new Estado();
   
-  form: FormGroup;
+  constructor(
+    private messageService: MessageService,
+    private AlunoService : AlunoService
 
-  constructor(private FormBuilder: FormBuilder) {
-    this.form = this.FormBuilder.group({
-      nome: [null],
-      email: [null],
-      telefone: [null],
-      endereco: [null],
-      curso: [null]
-    });
-  }
-  ngOnInit(): void {
-
+  ) { }
+    
+   
+   ngOnInit(): void {
+     this.data = new Aluno();
   }
 
+
+  salvar(form: NgForm) {
+      
+    this.messageService.clear;
+    if (form.valid) {
+      this.AlunoService.salvar(this.data);
+      this.messageService.add({ severity: "sucess", summary: "Infomação", detail: "Aluno cadastrado com sucesso" });
+    } else this.messageService.add({ severity: "error", summary: "Erro", detail: "Preencha os campos obrigatórios(*)!" });
+
+  
+  }
 
 }
 
