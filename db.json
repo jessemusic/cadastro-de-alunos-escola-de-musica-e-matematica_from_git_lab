@@ -1,0 +1,80 @@
+{
+  "alunos": [
+    {
+      "id": 2,
+      "nomeCompleto": "Jesse james",
+      "profissao": "Foragido da computaçã",
+      "dataDeNascimento": "2023-12-01",
+      "estadoCivil": "Casado",
+      "genero": "Masculino",
+      "endereco": "Avenida xxxxx, 0001",
+      "bairro": "Jardim da computação",
+      "cidade": "",
+      "estado": "",
+      "cep": "22222222201",
+      "telefoneFixo1": "",
+      "telefoneFixo2": "",
+      "celular": "",
+      "contato": "",
+      "email": "",
+      "identidade": "",
+      "cpf": "",
+      "temVeiculo": "B",
+      "habilitacao": ""
+    },
+    {
+      "nomeCompleto": "Jesse Caetano dos Santos",
+      "profissao": "Professor e programador",
+      "dataDeNascimento": "2023-12-01",
+      "estadoCivil": "Casado",
+      "genero": "Masculino",
+      "endereco": "Avenida xxxxx, 0001",
+      "bairro": "Jardim da computação",
+      "cidade": "",
+      "estado": "",
+      "cep": "22222222201",
+      "telefoneFixo1": "",
+      "telefoneFixo2": "",
+      "celular": "",
+      "contato": "",
+      "email": "",
+      "identidade": "",
+      "cpf": "",
+      "temVeiculo": "B",
+      "habilitacao": "",
+      "id": 3
+    },
+    {
+      "nomeCompleto": "Junior B",
+      "profissao": "Professor e programador",
+      "dataDeNascimento": "2023-12-01",
+      "estadoCivil": "Casado",
+      "genero": "Masculino",
+      "endereco": "xxxx, se numero",
+      "bairro": "jartmim oi",
+      "cidade": "",
+      "estado": "",
+      "cep": "11111111111",
+      "telefoneFixo1": "",
+      "telefoneFixo2": "",
+      "celular": "",
+      "contato": "",
+      "email": "",
+      "identidade": "",
+      "cpf": "",
+      "temVeiculo": "B",
+      "habilitacao": "",
+      "id": 7
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

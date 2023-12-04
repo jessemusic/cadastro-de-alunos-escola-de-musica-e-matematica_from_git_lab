@@ -8,6 +8,9 @@
 Nova tela de cadastro
 ![Alt text](image-3.png)
 
+Lista de alunos cadastrados
+![Alt text](image-5.png)
+
 Validando campos 
 ![Alt text](image-4.png)
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.9.
