@@ -1,0 +1,50 @@
+<!-- <mat-card class="card-busca" *ngFor="let x of cursos">
+
+  <img mat-card-image
+   src="assets/imagens/musica_y_matematicas1.png" alt="Música e matemática">
+  <mat-card-content>
+
+    <ul>
+      <li><p>{{x.descricao}}</p></li>
+        <li>{{x.tipoCurso}}</li>
+        <li>{{x.valor}}</li>
+        <li>{{x.pacote}}</li>
+    </ul>
+
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-flat-button color="primary">DETALHES DO CURSO</button>
+  </mat-card-actions>
+</mat-card>  -->
+
+<!-- <mat-card class="card-busca" *ngFor="let x of cursos">
+  <img mat-card-image src="assets/imagens/musica_y_matematicas1.png" alt="Música e matemática">
+  <mat-card-content>
+    <p>{{x.descricao}}</p>
+    <p>{{x.tipoCurso}}</p>
+    <p>{{x.valor}}</p>
+    <p>{{x.pacote}}</p>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-flat-button color="primary">DETALHES DO CURSO</button>
+  </mat-card-actions>
+</mat-card> -->
+
+<mat-grid-list cols="3" rowHeight="2:1">
+  <mat-card *ngFor="let x of cursos">
+    <img mat-card-image src="assets/imagens/musica_y_matematicas1.png" alt="Música e matemática">
+    <mat-card-content>
+      <ul>
+        <li><p>{{x.descricao}}</p></li>
+        <li>{{x.tipoCurso}}</li>
+        <li>{{x.valor}}</li>
+        <li>{{x.pacote}}</li>
+      </ul>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-flat-button color="primary">DETALHES DO CURSO</button>
+    </mat-card-actions>
+  </mat-card>
+</mat-grid-list>
+
+<mat-paginator [length]="cursos.length" [pageSize]="3" [pageSizeOptions]="[3, 6, 9]"></mat-paginator>

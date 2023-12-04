@@ -1,0 +1,44 @@
+<app-card variant="secondary" class="form-curso">
+    <form>
+        <h2>Cursos disponíveis</h2>
+        <div class="flex-container">
+            <mat-button-toggle-group aria-label="Tipo de cursos">
+                <mat-button-toggle >
+                    <mat-icon>check</mat-icon>
+                    Matemática
+                </mat-button-toggle>
+                <mat-button-toggle >
+                    Música
+                </mat-button-toggle>
+            </mat-button-toggle-group>
+            <mat-chip-listbox (click)="openDialog()" aria-label="Seleção de cursos">
+                <mat-chip-option selected>Individual</mat-chip-option>
+                <mat-chip-option>Em grupo</mat-chip-option>
+            </mat-chip-listbox>
+
+            <mat-chip-listbox aria-label="Seleção de cursos">
+                <button mat-raised-button color="primary" (click)="onCadastroDeAlunos()">CADASTRO DE ALUNOS</button>
+            </mat-chip-listbox>
+        </div>
+        <div class="flex-container">
+        <mat-form-field class="input-container" appearance="outline">
+            <mat-label>Iniciante</mat-label>
+            <mat-icon matPrefix>boy</mat-icon>
+            <input matInput placeholder="Iniciante">
+            <mat-icon matSuffix>search</mat-icon>
+        </mat-form-field>
+            <button mat-icon-button>
+                <mat-icon>sync_alt</mat-icon>
+            </button>
+        <mat-form-field class="input-container" appearance="outline">
+            <mat-label>Avançado</mat-label>
+            <mat-icon matPrefix>engineering</mat-icon>
+            <input matInput placeholder="Avançado">
+            <mat-icon matSuffix>search</mat-icon>
+        </mat-form-field>
+          <button mat-flat-button color="primary">BUSCAR</button> 
+        </div>
+            
+
+    </form>
+</app-card>
