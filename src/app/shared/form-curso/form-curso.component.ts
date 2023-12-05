@@ -21,11 +21,11 @@ export class FormCursoComponent {
     this.dialog.open(ModalComponent)
   }
   onCadastroDeAlunos() {
-    this.router.navigate(['/cadastro'], {relativeTo: this.route})
+    this.router.navigate(['cadastro'], {relativeTo: this.route})
   }
 
   onListaDeAlunos() {
-    this.router.navigate(['/lista'], {relativeTo: this.route})
+    this.router.navigate(['lista'], {relativeTo: this.route})
   }
 
 }
